@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>十四部委联合发文！样本外送、基因检测成检验领域反腐重点！</title>
+  <!-- 引入Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb', 
+            secondary: '#6B7280',
+            light: '#F9FAFB',
+            dark: '#1F2937'
+          },
+          fontFamily: {
+            sans: ['PingFang SC', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
+      .article-container {
+        max-width: 720px;
+      }
+    }
+  </style>
+  
+  <style>
+    /* 平滑滚动 */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* 文章段落动画 */
+    .article-paragraph {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    .article-paragraph.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* 按钮悬停效果 */
+    .interactive-btn {
+      transition: all 0.2s ease;
+    }
+    
+    .interactive-btn:hover {
+      transform: scale(1.05);
+    }
+    
+    /* 导航按钮动画 */
+    .nav-btn {
+      transition: background-color 0.2s ease;
+    }
+    
+    /* 微信式消息弹窗动画 */
+    .wechat-notification {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-out;
+    }
+    
+    .wechat-notification.show {
+      transform: translateY(0);
+    }
+
+    /* 条款列表样式 */
+    .clause-list {
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+    }
+    .sub-clause-list {
+      list-style-type: lower-alpha;
+      padding-left: 1.5rem;
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans text-dark">
+
+  <!-- 弹窗 -->
+  <div id="wechatNotification" class="wechat-notification fixed top-0 left-0 right-0 z-50">
+    <div class="article-container mx-auto bg-white border border-gray-200 shadow-md p-3 rounded-xl overflow-hidden">
+      <div class="flex items-center">
+        <div class="w-10 h-10 rounded-full bg-wechat flex items-center justify-center text-white mr-3 flex-shrink-0">
+          <img src="images/wx.png" alt="微信头像" class="w-full h-full object-cover">
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-medium text-gray-900 truncate">微信好友</h3>
+            <span class="text-xs text-gray-500">刚刚</span>
+          </div>
+          <p class="text-sm text-gray-700 truncate">您有一条新消息</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 文章标题栏 -->
+  <div class="bg-white border-b border-gray-100 sticky top-0 z-40">
+    <div class="article-container mx-auto px-6 py-4 flex justify-between items-center">
+      <button class="nav-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100">
+        <i class="fa fa-times text-gray-600"></i>
+      </button>
+      <button class="nav-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100">
+        <i class="fa fa-ellipsis-v text-gray-600"></i>
+      </button>
+    </div>
+  </div>
+  
+  <!-- 文章内容区 -->
+  <main class="article-container mx-auto bg-white px-6 py-8">
+    <!-- 文章标题 -->
+    <h1 class="text-[clamp(1.5rem,5vw,1.5rem)] font-bold leading-tight mb-6 text-balance">
+      十四部委联合发文！样本外送、基因检测成检验领域反腐重点！
+    </h1>
+    
+    <!-- 文章元数据 -->
+    <div class="flex flex-wrap items-center text-sm text-gray-500 mb-8">
+      <span class="text-primary mr-4">ABC新闻</span>
+      <span class="mr-4">2025年06月17日 12:30</span>
+      <span class="mr-4">中国</span>
+      <button class="flex items-center text-primary hover:underline transition-colors">
+        <i class="fa fa-headphones mr-1"></i> 听全文
+      </button>
+    </div>
+    
+    <!-- 星标按钮 -->
+    <div class="mb-8">
+      <button class="flex items-center text-gray-400 hover:text-yellow-400 transition-colors">
+        <i class="fa fa-star-o mr-1"></i> 星标
+      </button>
+    </div>
+    
+    <!-- 文章内容 -->
+    <div class="space-y-6 text-gray-800 leading-relaxed text-lg">
+      <p class="article-paragraph">
+        2025年6月13日，国家卫生健康委、教育部、工业和信息化部、公安部、财政部、商务部、审计署、国务院国资委、国家税务总局、市场监管总局、国家医保局、国家中医药局、国家疾控局、国家药监局等十四部委联合印发《关于2025年纠正医药购销领域和医疗服务中不正之风工作要点的通知》（以下简称《通知》），聚焦医药购销和医疗服务领域突出问题，部署全年纠风工作，其中明确将<strong>检测样本外送、基因检测</strong>等纳入检验领域反腐重点，强化全链条监管与整治。
+      </p>
+
+      <p class="article-paragraph">
+        《通知》指出，2025年纠风工作以习近平新时代中国特色社会主义思想为指导，全面贯彻党的二十大和二十届二中、三中全会精神，深化拓展全国医药领域腐败问题集中整治成效，纵深推进群众身边不正之风和腐败问题集中整治，实施行业不正之风常态化治理，为卫生健康事业高质量发展提供保障。
+      </p>
+
+      <h2 class="article-paragraph text-xl font-bold mt-8 mb-4 text-primary">
+        一、全面强化纠风工作顶层设计
+      </h2>
+
+      <ul class="article-paragraph clause-list space-y-4">
+        <li>
+          <strong>加强党对纠风工作的全面领导</strong>
+          <p class="mt-2 text-base">以党的二十届三中全会和习近平总书记关于健康中国建设重要论述精神为指导，加强全系统学习宣贯，落实新时代党的卫生与健康工作方针，争取党委政府在工作重心、资源倾斜、力量调配上的支持。</p>
+        </li>
+        <li>
+          <strong>始终坚持正确的工作方向</strong>
+          <p class="mt-2 text-base">将整治群众身边不正之风和腐败问题纳入行业作风整治重点，确保党中央、国务院关于整治“群腐”的决策部署落地。密切与纪检监察机关联系，健全不正之风和腐败问题“同查同治”机制。</p>
+        </li>
+        <li>
+          <strong>加强医药卫生领域廉政建设</strong>
+          <p class="mt-2 text-base">巩固党纪学习教育成果，用好纠风工作机制，推进医药卫生领域廉政建设任务落地。加强医疗卫生机构党的建设，防范重点领域和关键环节不正之风风险，深化“以案促改促治”，推动行业新风正气。</p>
+        </li>
+      </ul>
+
+      <h2 class="article-paragraph text-xl font-bold mt-8 mb-4 text-primary">
+        二、持续深化医药购销领域治理
+      </h2>
+
+      <ul class="article-paragraph clause-list space-y-4">
+        <li>
+          <strong>巩固治理成效</strong>
+          <p class="mt-2 text-base">严防行业不正之风反弹回潮，加强新型、变异、隐形问题研判预警，紧盯“关键少数”和关键岗位，聚焦药品、高值医用耗材、医用设备、基建和信息化项目招投标、后勤服务等监管重点，<strong>持续规范检测样本外送、外配处方、项目审批、资金使用等关键环节行为</strong>，加大行政执法和司法办案力度。</p>
+        </li>
+        <li>
+          <strong>压实主体责任</strong>
+          <p class="mt-2 text-base">将行风管理要求融入医药购销领域行政管理全流程，发挥多部门在制度建设、行业规划、标准制定、行业准入、行政执法等方面的协同作用，推动行业合规制度完善，提升医药领域规范化管理水平。</p>
+        </li>
+        <li>
+          <strong>加强穿透监管</strong>
+          <p class="mt-2 text-base">发挥穿透式审计监督优势，开展医药行业专项审计。打通“原材料采购—药品耗材生产—招标采购”监管通路，将监管重点向生产端覆盖。探索建立药品“生产加工—流通使用”全过程可追溯机制，推进药品耗材追溯码全场景采集应用。引导医药企业参考《医药企业防范商业贿赂风险合规指引》加强合规管理，规范医药代表在医疗机构内行为，净化购销秩序。</p>
+        </li>
+        <li>
+          <strong>强化行业自律</strong>
+          <p class="mt-2 text-base">督促医药行业健全合规内部管理章程，完善流通行业信用体系和信用管理。落实医药购销领域行贿人、受贿人“黑名单”制度及不良单位记录制度。规范行业社会组织兼职取酬、期刊管理、会议举办等行为，严格分支机构审批，提升行业组织专业化水平和公信力。</p>
+        </li>
+      </ul>
+
+      <h2 class="article-paragraph text-xl font-bold mt-8 mb-4 text-primary">
+        三、系统纠治医疗服务乱象
+      </h2>
+
+      <ul class="article-paragraph clause-list space-y-4">
+        <li>
+          <strong>加强突出问题专项治理</strong>
+          <p class="mt-2 text-base">统筹运用处方抽查、智能提示、飞行检查、绩效评价、医院巡查、异常住院费用病例核查及统计、审计、投诉处置等手段，<strong>重点聚焦患者隐私保护、基因检测、辅助生殖、医疗美容、儿童近视防控、医学证明开具等领域违法违规行为</strong>，深入整治殡葬领域腐败乱象，保持惩治腐败高压态势。</p>
+        </li>
+        <li>
+          <strong>规范互联网诊疗行为</strong>
+          <p class="mt-2 text-base">聚焦互联网诊疗资质准入、诊疗活动与实体医疗机构诊疗科目一致性、互联网处方等重点环节，强化“线上医疗”监管。重点打击网络“医托”、违规医药广告，以及假借医学科普或会议“引流”“带货”、伪造行业人员视频营销牟利等行为，建立多部门协同查处机制。</p>
+        </li>
+        <li>
+          <strong>强化医疗机构内部管理</strong>
+          <p class="mt-2 text-base">严格落实党委领导下的院长负责制，健全内部控制体系，执行“三重一大”制度，建立公立医疗机构党支部参与重大问题决策机制，加强纪检机构建设。医教协同强化高校附属医院管理，落实医疗机构行风管理制度要点，加强内部专项审计，建立风险预警防控机制，加大违规责任追究力度。</p>
+        </li>
+        <li>
+          <strong>强化医德医风管理</strong>
+          <p class="mt-2 text-base">压实医疗机构医德医风管理主体责任，加强医务人员日常教育引导，将行风建设与业务能力提升同部署。对违背医德、败坏医风、损害公共利益和患者权利的医务人员“零容忍”，严肃处理。</p>
+        </li>
+        <li>
+          <strong>维护医保基金安全</strong>
+          <p class="mt-2 text-base">紧盯定点医疗机构、定点零售药店、职业骗保人，严厉打击欺诈骗保和违规使用医保基金行为，用好多部门联合惩戒机制。全面落实《关于建立定点医药机构相关人员医保支付资格管理制度的指导意见》，实现“监管到人”。推进药品和高值医用耗材集中带量采购提质扩面，优化省级采购平台和智能监管平台，深化挂网药品价格治理。</p>
+        </li>
+      </ul>
+
+      <h2 class="article-paragraph text-xl font-bold mt-8 mb-4 text-primary">
+        四、扎实推进保障落实工作
+      </h2>
+
+      <ul class="article-paragraph clause-list space-y-4">
+        <li>
+          <strong>强化统筹协调</strong>
+          <p class="mt-2 text-base">依托纠风工作机制加强统筹，密切部门间面对面沟通，提升政策协调水平。为基层减负，协同开展“双随机、一公开”抽查，通过信息共享、智慧监管等创新手段提升监管效能。</p>
+        </li>
+        <li>
+          <strong>完善长效措施</strong>
+          <p class="mt-2 text-base">加强医药领域廉洁文化和医德医风建设，全覆盖常态化开展法纪教育，弘扬抗击“非典”精神、伟大抗疫精神和崇高职业精神，提升医务人员医学人文素养和法治素养。开展医德考评，探索考评结果与岗位聘任、职称评审、薪酬分配、评优评先的联动机制，营造风清气正行业环境。</p>
+        </li>
+        <li>
+          <strong>加强组织实施</strong>
+          <p class="mt-2 text-base">将纠正医药购销和医疗服务不正之风纳入部门重要工作，细化任务清单，确保要求落地。深化政策解读与指导，加强普法宣传和警示教育，鼓励社会各界参与监督，完善政府监管、行业自律、社会共治的工作格局。</p>
+        </li>
+      </ul>
+
+      <!-- 重点领域提示框 -->
+      <div class="article-paragraph my-8 bg-blue-50 p-6 rounded-xl border border-blue-100">
+        <h3 class="text-lg font-bold mb-4 text-primary">2025年医药领域反腐重点关注领域</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">1</span>
+            <span>检验检测领域：样本外送、基因检测全流程规范</span>
+          </div>
+          <div class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">2</span>
+            <span>医药购销环节：药品、高值耗材、设备招投标监管</span>
+          </div>
+          <div class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">3</span>
+            <span>医疗服务场景：辅助生殖、医疗美容、儿童近视防控</span>
+          </div>
+          <div class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">4</span>
+            <span>互联网医疗：资质合规、处方管理、虚假营销整治</span>
+          </div>
+          <div class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">5</span>
+            <span>医保基金：欺诈骗保、违规使用、支付资格监管</span>
+          </div>
+          <div class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">6</span>
+            <span>机构管理：“三重一大”执行、内部审计、风险防控</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="article-paragraph">
+        《通知》要求，各地区、各相关部门要结合实际认真贯彻执行，将纠风工作与医药领域各项改革任务协同推进，切实解决群众反映强烈的突出问题，不断增强群众健康获得感，为卫生健康事业高质量发展筑牢作风保障。
+      </p>
+    </div>
+  </main>
+  
+  <!-- 底部互动栏 -->
+  <footer class="bg-white border-t border-gray-100 sticky bottom-0 z-40 py-3">
+    <div class="article-container mx-auto px-6">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="images/tx.png" alt="作者头像" class="w-10 h-10 rounded-full mr-3">
+          <span class="text-gray-700 font-medium">ABC新闻</span>
+        </div>
+        
+        <div class="flex space-x-6">
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-thumbs-o-up text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">509</span>
+          </button>
+          
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-share text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">273</span>
+          </button>
+          
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-heart-o text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">386</span>
+          </button>
+          
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-comment-o text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">写留言</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script>
+    // 监听滚动，为进入视口的段落添加动画
+    document.addEventListener('DOMContentLoaded', () => {
+      // 弹窗
+       const notification = document.getElementById('wechatNotification');
+      
+      // 页面加载2秒后显示弹窗
+      setTimeout(() => {
+        notification.classList.add('show');
+        
+        // 2秒后自动隐藏弹窗
+        setTimeout(() => {
+          notification.classList.remove('show');
+        }, 4000);
+      }, 2000);
+      
+      // 文章段落动画
+      const paragraphs = document.querySelectorAll('.article-paragraph');
+      
+      // 初始检查可见元素
+      checkVisibility();
+      
+      // 监听滚动事件
+      window.addEventListener('scroll', checkVisibility);
+      
+      function checkVisibility() {
+        paragraphs.forEach(paragraph => {
+          const rect = paragraph.getBoundingClientRect();
+          const isVisible = (
+            rect.top < window.innerHeight * 0.8 &&
+            rect.bottom > 0
+          );
+          
+          if (isVisible) {
+            paragraph.classList.add('visible');
+          }
+        });
+      }
+      
+      // 点赞
+      const likeBtn = document.querySelector('.fa-thumbs-o-up').parentElement;
+      likeBtn.addEventListener('click', () => {
+        const icon = likeBtn.querySelector('i');
+        const count = likeBtn.querySelector('span');
+        if (icon.classList.contains('fa-thumbs-o-up')) {
+          icon.classList.remove('fa-thumbs-o-up');
+          icon.classList.add('fa-thumbs-up', 'text-red-500'); 
+          count.textContent = '510';
+        } else {
+          icon.classList.remove('fa-thumbs-up', 'text-red-500');
+          icon.classList.add('fa-thumbs-o-up');
+          count.textContent = '509';
+        }
+      });
+      
+      
+      // 收藏
+      const favoriteBtn = document.querySelector('.fa-heart-o').parentElement;
+      favoriteBtn.addEventListener('click', () => {
+        const icon = favoriteBtn.querySelector('i');
+        const count = favoriteBtn.querySelector('span');
+        if (icon.classList.contains('fa-heart-o')) {
+          icon.classList.remove('fa-heart-o');
+          icon.classList.add('fa-heart', 'text-red-500');
+          count.textContent = '387';
+        } else {
+          icon.classList.remove('fa-heart', 'text-red-500');
+          icon.classList.add('fa-heart-o');
+          count.textContent = '386';
+        }
+      });
+      
+      // 星标
+      const starBtn = document.querySelector('.fa-star-o').parentElement;
+      starBtn.addEventListener('click', () => {
+        const icon = starBtn.querySelector('i');
+        if (icon.classList.contains('fa-star-o')) {
+          icon.classList.remove('fa-star-o');
+          icon.classList.add('fa-star', 'text-yellow-400');
+        } else {
+          icon.classList.remove('fa-star', 'text-yellow-400');
+          icon.classList.add('fa-star-o');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

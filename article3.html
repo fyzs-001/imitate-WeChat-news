@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中纪委点名医药腐败:全国性被查，紧盯具体问题持续加压发力</title>
+  <!-- 引入Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb', 
+            secondary: '#6B7280',
+            light: '#F9FAFB',
+            dark: '#1F2937'
+          },
+          fontFamily: {
+            sans: ['PingFang SC', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
+      .article-container {
+        max-width: 720px;
+      }
+    }
+  </style>
+  
+  <style>
+    /* 平滑滚动 */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* 文章段落动画 */
+    .article-paragraph {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    .article-paragraph.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* 按钮悬停效果 */
+    .interactive-btn {
+      transition: all 0.2s ease;
+    }
+    
+    .interactive-btn:hover {
+      transform: scale(1.05);
+    }
+    
+    /* 导航按钮动画 */
+    .nav-btn {
+      transition: background-color 0.2s ease;
+    }
+    
+    /* 微信式消息弹窗动画 */
+    .wechat-notification {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-out;
+    }
+    
+    .wechat-notification.show {
+      transform: translateY(0);
+    }
+
+    /* 表格样式 */
+    .article-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    .article-table th, .article-table td {
+      border: 1px solid #e5e7eb;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+    .article-table th {
+      background-color: #f9fafb;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans text-dark">
+
+  <!-- 弹窗 -->
+  <div id="wechatNotification" class="wechat-notification fixed top-0 left-0 right-0 z-50">
+    <div class="article-container mx-auto bg-white border border-gray-200 shadow-md p-3 rounded-xl overflow-hidden">
+      <div class="flex items-center">
+        <div class="w-10 h-10 rounded-full bg-wechat flex items-center justify-center text-white mr-3 flex-shrink-0">
+          <img src="images/wx.png" alt="微信头像" class="w-full h-full object-cover">
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-medium text-gray-900 truncate">微信好友</h3>
+            <span class="text-xs text-gray-500">刚刚</span>
+          </div>
+          <p class="text-sm text-gray-700 truncate">您有一条新消息</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 文章标题栏 -->
+  <div class="bg-white border-b border-gray-100 sticky top-0 z-40">
+    <div class="article-container mx-auto px-6 py-4 flex justify-between items-center">
+      <button class="nav-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100">
+        <i class="fa fa-times text-gray-600"></i>
+      </button>
+      <button class="nav-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100">
+        <i class="fa fa-ellipsis-v text-gray-600"></i>
+      </button>
+    </div>
+  </div>
+  
+  <!-- 文章内容区 -->
+  <main class="article-container mx-auto bg-white px-6 py-8">
+    <!-- 文章标题 -->
+    <h1 class="text-[clamp(1.5rem,5vw,1.5rem)] font-bold leading-tight mb-6 text-balance">
+      中纪委点名医药腐败:全国性被查，紧盯具体问题持续加压发力
+    </h1>
+
+    <!-- 文章元数据 -->
+    <div class="flex flex-wrap items-center text-sm text-gray-500 mb-8">
+      <span class="text-primary mr-4">ABC新闻</span>
+      <span class="mr-4">2025年05月03日 07:00</span>
+      <span class="mr-4">中国</span>
+      <button class="flex items-center text-primary hover:underline transition-colors">
+        <i class="fa fa-headphones mr-1"></i> 听全文
+      </button>
+    </div>
+    
+    <!-- 星标按钮 -->
+    <div class="mb-8">
+      <button class="flex items-center text-gray-400 hover:text-yellow-400 transition-colors">
+        <i class="fa fa-star-o mr-1"></i> 星标
+      </button>
+    </div>
+    
+    <!-- 文章内容 -->
+    <div class="space-y-6 text-gray-800 leading-relaxed text-lg">
+      <p class="article-paragraph">
+        多地审计组密集行动，大批医院被严查。随着全国医药反腐工作持续深入推进，纪检监察机关与审计部门协同发力，针对医药领域权力集中、资金密集、资源富集的特点，开展系统性整治，重点聚焦医院诊疗服务、药械采购、运营管理等关键环节。
+      </p>
+      
+      <h2 class="article-paragraph text-xl font-bold mt-8 mb-4 text-primary">
+        01 多地审计组行动：医药反腐深入推进
+      </h2>
+      
+      <p class="article-paragraph">
+        7月19日，中央纪委国家监委网站在《上半年全国纪检监察机关监督检查审查调查数据解读》中明确提出，“打虎拍蝇”无禁区，国有企业、工程建设、能源、消防、高校、医药等领域系统整治正在深入推进。其中，医药领域因涉及群众切身利益，成为反腐工作的重点关注对象。
+      </p>
+      
+      <p class="article-paragraph">
+        中纪委曾多次发文强调审计在医疗反腐中的关键作用。在《持续深化纪检监察监督与审计监督贯通协同》一文中提到，贵州省纪委监委对审计机关移交的问题线索实行“优先办理、深挖彻查”机制，已严肃查处国企、金融、平台公司、医药、教育等领域一批大案要案，形成强大震慑效应。
+      </p>
+      
+      <p class="article-paragraph">
+        随着全国医药反腐持续加码，多地审计组已密集展开行动，聚焦公立医院突出问题开展专项审计：
+      </p>
+      
+      <ul class="article-paragraph list-disc pl-6 space-y-3">
+        <li><strong>天津</strong>：7月18日，天津市审计局发布近三年审计公立医院发现的突出问题，市医保局、市卫健委同步发布医保基金违法违规典型问题清单。重点推进17项医疗服务项目价格规范，解决价格政策不合理导致的违规收费问题；针对麻精药品，要求巩固全过程追溯体系，严防违规开药流入非法渠道。</li>
+        <li><strong>湖北武汉</strong>：同日，武汉市审计局对某公立医院开展全面审计，围绕诊疗服务、药械采购使用、运营管理绩效三大核心领域，重点审查药品医疗器械供应商准入变更、采购申请审批制度执行情况，推动医院采购流程规范化。</li>
+        <li><strong>其他地区</strong>：北京、安徽芜湖、甘肃兰州、广西横州等地审计部门均披露公立医院问题，涉及串换收费、重复收费、药品违规加价、采购管理不规范等；安徽阜阳审计局结合国家药品集中带量采购要求，重点监督市属3家公立医院药品采购政策执行情况，精准揭示采购管理漏洞。</li>
+      </ul>
+
+      <div class="article-paragraph my-8">
+        <h3 class="text-lg font-semibold mb-3">各地医药领域审计重点内容汇总</h3>
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>地方</th>
+              <th>审计相关文章/消息</th>
+              <th>审计核心内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>天津</td>
+              <td>《抓实审计整改 促进医疗机构管理水平提升》</td>
+              <td>总结近三年公立医院突出问题，整治公益性导向不鲜明、集体决策执行偏差、违规政府采购等问题</td>
+            </tr>
+            <tr>
+              <td>湖北武汉</td>
+              <td>《关注公立医院运营管理绩效 推动医院高质量发展》</td>
+              <td>围绕诊疗服务、药械采购使用、运营管理绩效开展全流程审计</td>
+            </tr>
+            <tr>
+              <td>安徽芜湖</td>
+              <td>《镜湖区审计局聚焦"四个重点"开展公立医院领导干部经济责任审计》</td>
+              <td>核查医疗腐败整治整改落实情况，紧盯药械采购、工程建设、招投标、医保基金使用等关键环节</td>
+            </tr>
+            <tr>
+              <td>安徽阜阳</td>
+              <td>《以审促治，助推公立医院药品采购规范化》</td>
+              <td>结合国家集采政策，监督公立医院药品采购政策执行，揭示采购管理突出问题</td>
+            </tr>
+            <tr>
+              <td>广西横州</td>
+              <td>《横州市卫生健康局关于公立医院改革和药品医疗器械生产经销使用情况专项审计调查发现问题整改工作报告》</td>
+              <td>发现15项问题，涉及诊疗收费、药械采购、运营管理、内部审计制度建设等，含串换收费、药品违规加价等</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="article-paragraph">
+        审计工作已成为医药反腐的“重要抓手”，通过精准揭示问题、推动制度完善，其在规范医疗领域管理、遏制腐败蔓延中的作用愈发凸显。
+      </p>
+      
+      <h2 class="article-paragraph text-xl font-bold mt-8 mb-4 text-primary">
+        02 2025下半年：医药审计瞄准这些领域
+      </h2>
+      
+      <p class="article-paragraph">
+        2025年进入下半场，审计在医药反腐中的作用持续强化，国家与地方多部门协同推出多项措施，推动医疗反腐迈入“深水区”。
+      </p>
+      
+      <h3 class="article-paragraph text-lg font-semibold mt-6 mb-3">1. 国家层面：构建“穿透式”全链条监管</h3>
+      <ul class="article-paragraph list-disc pl-6 space-y-3">
+        <li><strong>14部委联合部署</strong>：国家卫健委、国家医保局等14部委联合发布《2025年纠正医药购销领域和医疗服务中不正之风工作要点》，明确提出发挥“穿透式审计监督”优势，加强医药行业专项审计。要求打通“原材料采购—药品耗材生产—招标采购”全流程监管通路，将监管重点向生产端延伸，构建药品从生产到流通使用的全过程可追溯机制，推进药品耗材追溯码全场景采集应用。</li>
+        <li><strong>医保信用评价升级</strong>：国家医保局印发《关于进一步完善医药价格和招采信用评价制度的通知》，在原有制度框架基础上，将“审计报告、审计信息、审计移送处理书”新增为信用评价案源信息，进一步强化审计结果在医药招采信用管理中的应用，倒逼企业规范经营。</li>
+        <li><strong>企业合规指引出台</strong>：市场监管总局发布《医药企业防范商业贿赂风险合规指引》，要求医药企业建立与经营规模匹配的合规管理组织，配置专业合规人员，完善法务管理、财务审计、内部控制、风险管理等机制，从源头防范商业贿赂风险。</li>
+      </ul>
+
+      <h3 class="article-paragraph text-lg font-semibold mt-6 mb-3">2. 地方层面：专项审计覆盖重点医疗机构</h3>
+      <p class="article-paragraph">
+        多地已启动医疗机构专项审计，聚焦重点医院运营管理和财务收支：
+      </p>
+      <ul class="article-paragraph list-disc pl-6 space-y-3">
+        <li><strong>浙江</strong>：浙江省审计厅自6月30日起，对浙江大学医学院附属口腔医院（浙江省首批三级甲等口腔专科医院）2022-2024年运营管理和财务收支情况开展专项审计，必要时追溯相关年度或延伸审计关联单位。</li>
+        <li><strong>甘肃</strong>：兰州市审计局通过“大数据审计”实现全市预算单位审计全覆盖，精准定位医疗领域违规问题。</li>
+        <li><strong>山东</strong>：开展公立医院高质量发展审计，累计发现医药用品采购不规范、扩大医保结算范围等问题1093个，向40家医院追回多支付医保基金1600余万元；同时将大数据应用嵌入审计全流程，优化审计管理系统功能，提升审计效率。</li>
+      </ul>
+
+      <p class="article-paragraph">
+        2025年下半年，这场“穿透式审计风暴”正逐步覆盖更多医疗机构，通过国家与地方协同、传统审计与大数据技术结合，推动医药领域形成“不敢腐、不能腐、不想腐”的长效机制，切实维护群众医疗权益。
+      </p>
+    </div>
+  </main>
+  
+  <!-- 底部互动栏 -->
+  <footer class="bg-white border-t border-gray-100 sticky bottom-0 z-40 py-3">
+    <div class="article-container mx-auto px-6">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="images/tx.png" alt="作者头像" class="w-10 h-10 rounded-full mr-3">
+          <span class="text-gray-700 font-medium">ABC新闻</span>
+        </div>
+        
+        <div class="flex space-x-6">
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-thumbs-o-up text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">797</span>
+          </button>
+          
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-share text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">442</span>
+          </button>
+          
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-heart-o text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">413</span>
+          </button>
+          
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-comment-o text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">写留言</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script>
+    // 监听滚动，为进入视口的段落添加动画
+    document.addEventListener('DOMContentLoaded', () => {
+      // 弹窗
+       const notification = document.getElementById('wechatNotification');
+      
+      // 页面加载0.5秒后显示弹窗
+      setTimeout(() => {
+        notification.classList.add('show');
+        
+        // 2秒后自动隐藏弹窗
+        setTimeout(() => {
+          notification.classList.remove('show');
+        }, 2000);
+      }, 500);
+      
+      // 文章段落动画
+      const paragraphs = document.querySelectorAll('.article-paragraph');
+      
+      // 初始检查可见元素
+      checkVisibility();
+      
+      // 监听滚动事件
+      window.addEventListener('scroll', checkVisibility);
+      
+      function checkVisibility() {
+        paragraphs.forEach(paragraph => {
+          const rect = paragraph.getBoundingClientRect();
+          const isVisible = (
+            rect.top < window.innerHeight * 0.8 &&
+            rect.bottom > 0
+          );
+          
+          if (isVisible) {
+            paragraph.classList.add('visible');
+          }
+        });
+      }
+      
+      // 点赞按钮功能
+      const likeBtn = document.querySelector('.fa-thumbs-o-up').parentElement;
+      likeBtn.addEventListener('click', () => {
+        const icon = likeBtn.querySelector('i');
+        const count = likeBtn.querySelector('span');
+        if (icon.classList.contains('fa-thumbs-o-up')) {
+          icon.classList.remove('fa-thumbs-o-up');
+          icon.classList.add('fa-thumbs-up', 'text-red-500'); 
+          count.textContent = '798';
+        } else {
+          icon.classList.remove('fa-thumbs-up', 'text-red-500');
+          icon.classList.add('fa-thumbs-o-up');
+          count.textContent = '797';
+        }
+      });
+      
+      
+      // 收藏按钮功能
+      const favoriteBtn = document.querySelector('.fa-heart-o').parentElement;
+      favoriteBtn.addEventListener('click', () => {
+        const icon = favoriteBtn.querySelector('i');
+        const count = favoriteBtn.querySelector('span');
+        if (icon.classList.contains('fa-heart-o')) {
+          icon.classList.remove('fa-heart-o');
+          icon.classList.add('fa-heart', 'text-red-500');
+          count.textContent = '414';
+        } else {
+          icon.classList.remove('fa-heart', 'text-red-500');
+          icon.classList.add('fa-heart-o');
+          count.textContent = '413';
+        }
+      });
+      
+      // 星标按钮功能
+      const starBtn = document.querySelector('.fa-star-o').parentElement;
+      starBtn.addEventListener('click', () => {
+        const icon = starBtn.querySelector('i');
+        if (icon.classList.contains('fa-star-o')) {
+          icon.classList.remove('fa-star-o');
+          icon.classList.add('fa-star', 'text-yellow-400');
+        } else {
+          icon.classList.remove('fa-star', 'text-yellow-400');
+          icon.classList.add('fa-star-o');
+        }
+      });
+    });
+  </script>
+
+
+    </body></html>

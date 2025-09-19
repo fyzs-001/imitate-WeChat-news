@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="wrap">
+		<div class="top">
+			<div>
+				<a href="javascript:;">
+					<img src="images/back.png" alt="" />
+				</a>
+			</div>
+			<div>
+				<a href="javascript:;">
+					<img src="images/search.png" alt="" />
+				</a>
+				<a href="javascript:;">
+					<img src="images/more.png" alt="" />
+				</a>
+			</div>
+		</div>
+		<div class="tx">
+			<dl>
+				<dt><img src="images/tx.png" alt="" /></dt>
+				<dd>
+					<h1>
+						ABC新闻
+					</h1>
+					<p>
+						中国
+					</p>
+				</dd>
+			</dl>
+		</div>
+		<p style="font-size: 21px; font-weight: 500;display: flex; align-items: center; padding: 0 25px; box-sizing: border-box;">
+			做有内涵的时政新媒体<a href="javascript:;"><img height="21px" src="images/on.png" alt="" /></a>
+		</p>
+		<h1 style="color: #585858; font-weight: 600; font-size: 26px; margin: 30px 0;padding: 0 25px; box-sizing: border-box;">
+			4篇原创内容
+		</h1>
+		<div class="btn">
+			<button>关注公众号</button>
+		</div>
+		<ul class="menu">
+			<li>
+				<a href="javascript:;">
+					消息
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					视频号
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					服务<img src="images/more2.png" alt="" />
+				</a>
+			</li>
+		</ul>
+		<div class="main">
+		<!-- 第一篇文章 -->
+			<a href="article1.html" class="card-link">
+				<div class="card">
+					<div class="cardTime">
+					2025年07月24日
+					</div>
+					<dl>
+						<dd>
+							<h2>
+								中纪委亮剑审计监管！公立医院、药械产销将受严查
+							</h2>
+							<p>
+								阅读 5629  赞 577
+							</p>
+						</dd>
+						<dt>
+							<img src="images/img4.png" alt="" />
+						</dt>
+					</dl>
+				</div>
+			</a>
+		<!-- 第2篇文章 -->
+			<a href="article2.html" class="card-link">
+				<div class="card">
+					<div class="cardTime">
+					2025年06月17日
+					</div>
+					<dl>
+						<dd>
+							<h2>
+								十四部委联合发文！样本外送、基因检测成检验领域反腐重点！
+							</h2>
+							<p>
+								阅读 7749  赞 509
+							</p>
+						</dd>
+						<dt>
+							<img src="images/img1.jpg" alt="" />
+						</dt>
+					</dl>
+				</div>
+			</a>
+			<!-- 第3篇文章 -->
+			<a href="article3.html" class="card-link">	
+				<div class="card">
+					<div class="cardTime">
+						2025年05月03日
+					</div>
+					<dl>
+						<dd>
+							<h2>
+								中纪委点名医药腐败:全国性被查，紧盯具体问题持续加压发力
+							</h2>
+							<p>
+								阅读 8543  赞 797
+							</p>
+						</dd>
+						<dt>
+							<img src="images/img2.jpeg" alt="" />
+						</dt>
+					</dl>
+				</div>
+			</a>
+			<!-- 第4篇文章 -->
+			<a href="article4.html" class="card-link">
+				<div class="card">
+					<div class="cardTime">
+						2024年07月16日
+					</div>
+					<dl>
+						<dd>
+							<h2>
+								严查6大科室、67项问题！国家医保局列医保飞检清单
+							</h2>
+							<p>
+								阅读 8443 赞 803
+							</p>
+						</dd>
+						<dt>
+							<img src="images/img3.jpg" alt="" />
+						</dt>
+					</dl>
+				</div>
+			</a>
+		</div>
+		<div class="wechat" id="wechatAlert">
+			<div class="wechatContent">
+				<dl>
+					<dt>
+						<img src="images/wx.png" alt="" />
+					</dt>
+					<dd>
+						<p class="name">
+							微信好友
+						</p>
+						<p class="meg">
+							您有一条新消息
+						</p>
+					</dd>
+				</dl>
+				<div class="wechatTime">
+					刚刚
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	    window.onload = function() {
+	        const wechat = document.getElementById('wechatAlert');
+	        
+	        setTimeout(() => {
+	            wechat.classList.add('active');
+	        }, 1500);
+	
+	        setTimeout(() => {
+	            wechat.classList.remove('active');
+	            wechat.classList.add('hide');
+	        }, 4500);
+	
+	        wechat.addEventListener('transitionend', () => {
+	            if (wechat.classList.contains('hide')) {
+	                wechat.remove();
+	            }
+	        });
+	    };
+	</script>
+</body>
+</html>
