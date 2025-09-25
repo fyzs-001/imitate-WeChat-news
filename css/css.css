@@ -1,0 +1,398 @@
+/*通用类*/
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0 auto;
+	font-size: 0.24rem;
+	font-family: "microsoft yahei";
+	background-color: #efefef;
+	text-align: justify;
+	color: #010000;
+	position: relative;
+}
+ul li{list-style: none;}
+
+h1, h2, h3 {
+	font-weight: 500;
+}
+img {
+	border: none;
+}
+a {
+	cursor: pointer;
+	color: #333;
+	text-decoration: none;
+	outline: none;
+}
+a:hover {
+	color: #006bb7;
+}
+ul {
+	list-style-type: none;
+}
+em {
+	font-style: normal;
+}
+.lt {
+	float: left;
+}
+.rt {
+	float: right;
+}
+input.sub, label {
+	border: none;
+	cursor: pointer;
+}
+input, textarea {
+	font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+	outline: none;
+}
+table {
+	border-collapse: collapse;
+}
+table td, table th {
+	padding: 0;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+ color:#ccc;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {   /* Mozilla Firefox 19+ */
+ color:#ccc;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {    /* Mozilla Firefox 4 to 18 */
+ color:#ccc;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {  /* Internet Explorer 10-11 */
+ color:#ccc;
+}
+div.clear {
+	font: 0px Arial;
+	line-height: 0;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.wrap {
+	width: 100%;
+	height: auto;
+	padding: 0.2rem 0;
+	box-sizing: border-box;
+	margin: 0 auto;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 0.25rem;
+	box-sizing: border-box;
+}
+
+.top div {
+	display: flex;
+	align-items: center;
+}
+
+.top div:last-child {
+	gap: 0.2rem;
+}
+
+.top div a {
+	display: flex;
+	height: 0.35rem;
+}
+
+.top div a img {
+	height: 100%;
+}
+
+.tx {
+	width: 100%;
+	margin: 0.4rem 0;
+	padding: 0 0.25rem;
+	box-sizing: border-box;
+}
+
+.tx dl {
+	display: flex;
+	height: 1.5rem;
+	align-items: center;
+
+}
+
+.tx dl dt {
+	height: 100%;
+	margin-right: 0.2rem;
+}
+
+.tx dl dt img {
+	height: 100%;
+	border: 50%;
+	width: 1.5rem;
+}
+
+.tx dl dd {
+	font-size: 0.26rem;
+	color: #999;
+}
+
+.tx dl dd h1 {
+	font-size: 0.38rem;
+	letter-spacing: 0.05rem;
+	color: #000;
+}
+.p1{
+	font-size: 0.21rem; font-weight: 500;display: flex; align-items: center; padding: 0 0.25rem; box-sizing: border-box;
+}
+.h1{
+	color: #585858; font-weight: 600; font-size: 0.26rem; margin: 0.3rem 0;padding: 0 0.25rem; box-sizing: border-box;
+}
+
+.btn {
+	width: 100%;
+	padding: 0 0.25rem;
+	box-sizing: border-box;
+}
+
+.btn button {
+	width: 100%;
+	height: 0.7rem;
+	background-color: #06c263;
+	color: #fff;
+	border: none;
+	border-radius: 0.1rem;
+	font-size: 0.24rem;
+}
+
+.menu {
+	width: 100%;
+	padding: 0 0.25rem;
+	box-sizing: border-box;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	gap: 0.2rem;
+	margin: 0.4rem 0;
+}
+
+.menu li {
+	padding: 0 0.03rem;
+	padding-bottom: 0.05rem;
+
+}
+
+.menu li a {
+	font-size: 0.24rem;
+}
+
+.menu li a img {
+	height: 0.2rem;
+	margin-left: 0.01rem;
+}
+
+.menu li:first-child {
+	border-bottom: 0.02rem solid #000;
+}
+.menu li:last-child a{
+	display: flex;
+	align-items: center;
+}
+
+.main {
+	background-color: #fafafa;
+	width: 100%;
+	padding: 0.15rem 0.25rem;
+	box-sizing: border-box;
+
+}
+
+.card {
+	width: 100%;
+	background-color: #fff;
+	font-size: 0.26rem;
+	padding: 0.30rem;
+	box-sizing: border-box;
+	margin-bottom: 0.15rem;
+
+}
+
+.card dl dd h2 {
+	font-size: 0.26rem;
+	line-height: 1.5em;
+}
+
+.card dl dd p {
+	color: #ccc;
+	margin-top: 0.15rem;
+}
+
+.cardTime {
+	color: #ccc;
+	margin-bottom: 0.48rem;
+}
+
+.card dl {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card dl dt {
+	width: 1.25rem;
+}
+
+.card dl dt img {
+	width: 100%;
+	height: 1.2rem;
+	border-radius: 0.05rem;
+}
+
+.card dl dd {
+	flex: 1;
+	margin-right: 0.2rem;
+}
+
+.wechat {
+	width: 7.5rem;
+	padding: 0 0.25rem;
+	box-sizing: border-box;
+	position: fixed;
+	border-radius: 0.2rem;
+	overflow: hidden;
+	box-shadow: 0 0 0.15rem 0.02rem rgba(0, 0, 0, .3);
+	top: -1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	z-index: 1000;
+}
+
+.wechat.active {
+	top: 0.2rem;
+	opacity: 1;
+}
+
+.wechat.hide {
+	top: -1rem;
+	opacity: 0;
+}
+
+.wechatContent {
+	width: 100%;
+	background-color: #fff;
+
+	padding: 0.3rem 0.2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	box-sizing: border-box;
+}
+
+.wechatContent dl {
+	display: flex;
+	align-items: center;
+}
+
+.wechatContent dl dt {
+	width: 0.5rem;
+}
+
+.wechatContent dl dt img {
+	width: 100%;
+}
+
+.wechatContent dl dd {
+	font-size: 0.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.1rem;
+	margin-left: 0.2rem;
+}
+
+.meg {
+	color: #999;
+}
+
+.wechatTime {
+	font-size: 0.25rem;
+	color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html {
+	font-size: 42.6667px;
+}
+@media screen and (max-width: 320px) {
+html {
+	font-size: 42.6667px;
+}
+}
+@media screen and (min-width: 321px) and (max-width: 360px) {
+html {
+	font-size: 48px;
+}
+}
+@media screen and (min-width: 361px) and (max-width: 375px) {
+html {
+	font-size: 50px;
+}
+}
+@media screen and (min-width: 376px) and (max-width: 414px) {
+html {
+	font-size: 55px;
+}
+}
+@media screen and (min-width: 415px) and (max-width: 484px) {
+html {
+	font-size: 64px;
+}
+}
+@media screen and (min-width: 485px) and (max-width: 720px) {
+html {
+	font-size: 96px;
+}
+}
+@media screen and (min-width: 721px) and (max-width: 768px) {
+html {
+	font-size: 102px;
+}
+}
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+html {
+	font-size: 144px;
+}
+}
+@media screen and (min-width: 1080px) {
+html {
+	font-size: 144px;
+}
+}
+/*新设备的rem-vw标准*/
